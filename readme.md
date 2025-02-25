@@ -118,7 +118,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
 
 Refer to the MDN Web Docs for help with JavaScript syntax and methods.
 
-
+```javascript
 let sculptureListLengths = {
     name:'',
     artist:'',
@@ -127,3 +127,4 @@ let sculptureListLengths = {
     alt:''
 
 };
+```
