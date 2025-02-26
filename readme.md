@@ -127,6 +127,4 @@ const sculptureListLengths = {
     alt: null
 
 };
-
-};
 ```
