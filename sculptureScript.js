@@ -9,54 +9,41 @@ for (const key in element){
     console.log(`${key}: ${element[key].length}`)
 } */
 
-let sculptureListLengths = {
-    name:'',
-    artist:'',
-    description:'',
-    url:'',
-    alt:''
+const sculptureListLengths = {
+    name: null,
+    artist: null,
+    description: null,
+    url: null,
+    alt: null
 
 };
 
 const sculptureArr = []
 
 let counter = 0;
-let counterTwo = 0;
 
 objectAssignment(counter);
 
-function  objectAssignment(idx) {
-    for (const item in sculptureList) {
-        var sculpture = Object.create(sculptureListLengths);
+function objectAssignment(idx) {
 
-        Object.assign(sculpture, item);
-        /*sculpture.name = sculptureList.name;
-        sculpture.artist = sculptureList.artist;
-        sculpture.description = sculptureList.description;
-        sculpture.url = sculptureList.url;
-        sculpture.alt = sculptureList.alt;*/
+
+    for (const item of sculptureList) {
+        //let sculpture = {};
+
+        sculpture = Object.assign({}, sculptureList[idx]);
 
         sculptureArr.push(sculpture);
 
-        
+        console.log(`{\n\nname: ${sculptureArr[idx].name.length},\n\nartist: ${sculptureArr[idx].artist.length},\n`)
+        console.log(`description: ${sculptureArr[idx].description.length},\n\nurl: ${sculptureArr[idx].url.length},\n`)
+        console.log(`alt: ${sculptureArr[idx].alt.length}\n\n}`)
 
-        counter += 1
+
+        idx += 1
     }
 
 }
 
-objectPrinting(counterTwo);
 
-function objectPrinting (idx) {
-
-    for (const key of sculptureArr) {
-
-            console.log(`${key}: ${sculptureArr[key].length()}`)
-
-        
-    }
-
-
-}
 
 
